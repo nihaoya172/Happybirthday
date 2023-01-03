@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="../css/styless.css" media="screen" type="text/css" />
+  <style type="text/css">
+    #btn{ width:800px;height:40px; font-size:20px;border-radius:10px;
+      background:#ff0066;margin-top:550px; }
+    #main{ width:1400px;height:600px; background:#cc00cc; margin:0 auto;text-align:center; position:relative;}
+    #vido2{ width:602px; height:402px; border:1px dotted #00ff66; margin:0 auto; position:fixed; top:100px; left:700px;}
+    #vido1{ width:602px; height:402px; border:1px dotted #00ff66; margin:0 auto; position:fixed; top:100px; left:50px;}
+  </style>
+</head>
+
+<body class="bg">
+  <video  id="video" width="1200" height="600"  controls>
+    <source src="../music/srkl5.mp4" type="video/mp4" >
+  </video>
+
+
+
+  </div>
+  <div class="button-style1">
+    <a onclick="open_video1()" class="lk1">
+      <div class="link1">
+        <div class="bt1">
+          喜欢
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="button-style2">
+    <a onclick="open_video2()" class="lk2">
+      <div class="link2">
+        <div class="bt1">
+          我不喜欢
+        </div>
+      </div>
+    </a>
+  </div>
+  <div id="vido1" class="">
+    <video width="500" height="400" controls>
+      <source src="../music/ty.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="vido2" class="">
+    <video width="500" height="400" controls>
+      <source src="../music/zkbd.mp4" type="video/mp4">
+    </video>
+  </div>
+  <script>
+    window.onload=function non(){
+        document.getElementById("vido1").style.cssText = "display:none;";
+        document.getElementById("vido2").style.cssText = "display:none;";
+    }
+
+    function open_video1(){
+        document.getElementById("vido1").style.cssText = "display:block;";
+        setInterval("toggleSound()",1);
+    }
+    function open_video2(){
+        document.getElementById("vido2").style.cssText = "display:block;";
+        document.getElementById("vido2").play();
+    }
+
+    function toggleSound() {
+            var music = document.getElementById("vido1");//获取ID
+                console.log(music);
+                console.log(music.paused);
+            if (music.paused) { //判读是否播放
+                music.paused=false;
+                music.play(); //没有就播放
+            	}
+        }
+
+
+
+  </script>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+
+  </script>
+  </ul>
+  <script src='../js/jquery.js'></script>
+
+</body>
+
+</html>
